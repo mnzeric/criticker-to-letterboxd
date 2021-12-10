@@ -1,0 +1,1 @@
+Simple script to convert csv from criticker format to letterboxd
