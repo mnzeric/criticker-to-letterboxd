@@ -3,7 +3,7 @@ import datetime
 
 df = pd.read_csv('ratings.csv',sep=',',encoding='UTF-8')
 
-#Converting my rating format (0-10) for letterboxd rating10 converter, skip this to use rating (1-5)
+#!!! SKIP OR EDIT this to use rating (1-5) !!!, converting my rating format (0-10) for letterboxd rating10 converter
 df['Score'] = df['Score'].apply(lambda x: 1 if x == 0 else x)
 
 #Step added to remove extra spaces in column names
