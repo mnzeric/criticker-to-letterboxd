@@ -15,6 +15,6 @@ df = df[['IMDB ID', 'Film Name', 'Year', 'Score', 'Date Rated', 'Mini Review']]
 df.rename(columns={'IMDB ID':'imdbID', 'Film Name':'Title', 'Year':'Year', 'Score':'Rating10', 'Date Rated':'WatchedDate', 'Mini Review':'Review'}, inplace=True)
 
 #Converting date format
-df['WatchedDate'] = df['WatchedDate'].apply(lambda x: datetime.datetime.strptime(x, '%b %d %Y, %H:%M').strftime("%Y-%m-%d"))
+df['WatchedDate'] = df['WatchedDate'].apply(lambda x: datetime.datetime.strptime(x, '%Y-%m-%d %H:%M').strftime("%Y-%m-%d"))
 
 df.to_csv('to_letterboxd.csv', index=False)
